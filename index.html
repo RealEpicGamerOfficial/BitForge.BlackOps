@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitForge BlackOps | Intelligence & Bounties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-dark: #050505;
+            --accent-red: #ff3e3e;
+            --accent-glow: rgba(255, 62, 62, 0.2);
+            --card-bg: #111111;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Space+Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'JetBrains+Mono', monospace; }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, #1a0a0a 0%, #050505 100%);
+        }
+
+        .glitch-border {
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .glitch-border:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .btn-primary {
+            background: var(--accent-red);
+            color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px var(--accent-glow);
+        }
+
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #00ff88;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 62, 62, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.1;
+            position: fixed;
+            pointer-events: none;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            from { top: -100px; }
+            to { top: 100vh; }
+        }
+    </style>
+</head>
+<body class="hero-gradient min-h-screen">
+    <div class="scanline"></div>
+
+    <!-- Navigation -->
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-red-600 rounded-sm flex items-center justify-center font-bold text-black italic">B</div>
+            <span class="text-xl font-bold tracking-tighter uppercase">BitForge <span class="text-red-500">BlackOps</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+            <a href="https://realepicgamerofficial.github.io/BitForge/" class="hover:text-white transition-colors">Main Site</a>
+            <a href="#intel" class="hover:text-white transition-colors">Intel</a>
+            <a href="#rewards" class="hover:text-white transition-colors">Rewards</a>
+        </div>
+        <div>
+            <span class="text-[10px] mono text-red-500 border border-red-500/30 px-2 py-1 rounded">SECURE CONNECTION ACTIVE</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold mb-6 uppercase tracking-widest">
+            <span class="status-pulse"></span> Operation: System Integrity
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            Snitch. Improve. <span class="text-red-600">Get Paid.</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            BitForge BlackOps is an elite initiative for students and teachers. Report bypasses, vulnerabilities, and system leaks to help us build a more resilient ecosystem. Your intelligence is valuable.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVWLkjs0CiZBYjvyPg-xMQFonKFOwoH2NviF2y4qiE_IaJoQ/viewform?usp=pp_url&entry.1724385110=USA/&entry.1878403010=%23&entry.1891281794=Cash,+in+USD" 
+               class="btn-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Report Bypass & Earn
+            </a>
+            <a href="https://forms.gle/fjkDCn1BLgbpvRVm9" 
+               class="glitch-border bg-white/5 px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/10">
+                Join BlackOps Division
+            </a>
+        </div>
+    </header>
+
+    <!-- Stats/Info Grid -->
+    <section id="intel" class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-6">
+        <div class="bg-[#0a0a0a] p-8 rounded-xl border border-white/5">
+            <div class="text-red-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 uppercase italic">Bypass Intel</h3>
+            <p class="text-gray-500 text-sm">Discovered a way around the BitForge filters? Found a site leak? Report it through our encrypted channels.</p>
+        </div>
+
+        <div class="bg-[#0a0a0a] p-8 rounded-xl border border-white/5">
+            <div class="text-red-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 uppercase italic">Monetary Rewards</h3>
+            <p class="text-gray-500 text-sm">Verified reports are eligible for payouts. We pay in Cash (USD) for high-impact system improvements.</p>
+        </div>
+
+        <div class="bg-[#0a0a0a] p-8 rounded-xl border border-white/5">
+            <div class="text-red-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 uppercase italic">Fast Verification</h3>
+            <p class="text-gray-500 text-sm">Our team reviews all BlackOps intel within 48-72 hours. High priority leaks get immediate attention.</p>
+        </div>
+    </section>
+
+    <!-- Operational Details -->
+    <section id="rewards" class="max-w-4xl mx-auto px-6 py-20 border-t border-white/5">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold uppercase tracking-widest mb-4 italic">Bounty Protocol</h2>
+            <p class="text-gray-400">Standard operating procedures for all BlackOps agents.</p>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group bg-white/5 rounded-lg border border-white/5 overflow-hidden">
+                <summary class="p-6 cursor-pointer font-bold flex justify-between items-center hover:bg-white/10 transition-colors">
+                    What qualifies as a reportable bypass?
+                    <span class="text-red-500 group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <div class="p-6 text-gray-400 border-t border-white/5 text-sm leading-relaxed">
+                    Any method that allows a user to access restricted content, circumvent usage limits, or hide their activity from the BitForge administrative systems. This includes URL bypasses, mirror sites, and script injections.
+                </div>
+            </details>
+
+            <details class="group bg-white/5 rounded-lg border border-white/5 overflow-hidden">
+                <summary class="p-6 cursor-pointer font-bold flex justify-between items-center hover:bg-white/10 transition-colors">
+                    How are payments issued?
+                    <span class="text-red-500 group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <div class="p-6 text-gray-400 border-t border-white/5 text-sm leading-relaxed">
+                    Once a bypass is verified and patched, we issue payments via the method specified in your report. Our default is Cash (USD). Payout amounts vary based on the severity of the vulnerability.
+                </div>
+            </details>
+
+            <details class="group bg-white/5 rounded-lg border border-white/5 overflow-hidden">
+                <summary class="p-6 cursor-pointer font-bold flex justify-between items-center hover:bg-white/10 transition-colors">
+                    Can I remain anonymous?
+                    <span class="text-red-500 group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <div class="p-6 text-gray-400 border-t border-white/5 text-sm leading-relaxed">
+                    Yes. While we need contact info for payment, all report data is handled internally and your identity is not disclosed to the general BitForge user base.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-gray-600 text-xs mono uppercase tracking-widest mb-4">BitForge BlackOps Division © 2024 | All Rights Reserved</p>
+        <div class="flex justify-center gap-6 opacity-40 hover:opacity-100 transition-opacity">
+            <a href="#" class="text-xs uppercase hover:text-red-500 transition-colors">Privacy</a>
+            <a href="#" class="text-xs uppercase hover:text-red-500 transition-colors">Terms</a>
+            <a href="https://realepicgamerofficial.github.io/BitForge/" class="text-xs uppercase hover:text-red-500 transition-colors">Support</a>
+        </div>
+    </footer>
+
+</body>
+</html>
